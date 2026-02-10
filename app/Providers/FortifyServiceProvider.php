@@ -45,13 +45,16 @@ class FortifyServiceProvider extends ServiceProvider
      */
     private function configureViews(): void
     {
-        Fortify::loginView(fn () => view('pages::auth.login'));
+        // Package auth views
+        Fortify::loginView(fn () => view('flowbite-blade::auth.login'));
+        Fortify::registerView(fn () => view('flowbite-blade::auth.register'));
+        Fortify::resetPasswordView(fn () => view('flowbite-blade::auth.reset-password'));
+        Fortify::requestPasswordResetLinkView(fn () => view('flowbite-blade::auth.forgot-password'));
+
+        // Local views (kept local, converted from Flux to Flowbite)
         Fortify::verifyEmailView(fn () => view('pages::auth.verify-email'));
         Fortify::twoFactorChallengeView(fn () => view('pages::auth.two-factor-challenge'));
         Fortify::confirmPasswordView(fn () => view('pages::auth.confirm-password'));
-        Fortify::registerView(fn () => view('pages::auth.register'));
-        Fortify::resetPasswordView(fn () => view('pages::auth.reset-password'));
-        Fortify::requestPasswordResetLinkView(fn () => view('pages::auth.forgot-password'));
     }
 
     /**

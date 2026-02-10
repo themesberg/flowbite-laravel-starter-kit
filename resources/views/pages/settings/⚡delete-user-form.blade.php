@@ -27,37 +27,54 @@ new class extends Component {
 
 <section class="mt-10 space-y-6">
     <div class="relative mb-5">
-        <flux:heading>{{ __('Delete account') }}</flux:heading>
-        <flux:subheading>{{ __('Delete your account and all of its resources') }}</flux:subheading>
+        <h2 class="text-xl font-semibold text-gray-900 dark:text-white">{{ __('Delete account') }}</h2>
+        <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">{{ __('Delete your account and all of its resources') }}</p>
     </div>
 
-    <flux:modal.trigger name="confirm-user-deletion">
-        <flux:button variant="danger" x-data="" x-on:click.prevent="$dispatch('open-modal', 'confirm-user-deletion')" data-test="delete-user-button">
+    <div x-data="{ showDeleteModal: false }">
+        <x-fwb.button color="red" @click="showDeleteModal = true" data-test="delete-user-button">
             {{ __('Delete account') }}
-        </flux:button>
-    </flux:modal.trigger>
+        </x-fwb.button>
 
-    <flux:modal name="confirm-user-deletion" :show="$errors->isNotEmpty()" focusable class="max-w-lg">
-        <form method="POST" wire:submit="deleteUser" class="space-y-6">
-            <div>
-                <flux:heading size="lg">{{ __('Are you sure you want to delete your account?') }}</flux:heading>
+        {{-- Delete Account Modal --}}
+        <div
+            x-show="showDeleteModal || {{ $errors->isNotEmpty() ? 'true' : 'false' }}"
+            x-cloak
+            class="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto"
+        >
+            {{-- Backdrop --}}
+            <div x-show="showDeleteModal" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="fixed inset-0 bg-gray-900/50 dark:bg-gray-900/80" @click="showDeleteModal = false"></div>
 
-                <flux:subheading>
-                    {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.') }}
-                </flux:subheading>
+            {{-- Modal Content --}}
+            <div x-show="showDeleteModal" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" class="relative w-full max-w-lg p-4">
+                <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
+                    {{-- Close button --}}
+                    <button type="button" class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" @click="showDeleteModal = false">
+                        <svg class="w-3 h-3" fill="none" viewBox="0 0 14 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/></svg>
+                        <span class="sr-only">{{ __('Close') }}</span>
+                    </button>
+
+                    <form method="POST" wire:submit="deleteUser" class="p-4 md:p-5 space-y-6">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{{ __('Are you sure you want to delete your account?') }}</h3>
+
+                            <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                                {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.') }}
+                            </p>
+                        </div>
+
+                        <x-fwb.input wire:model="password" :label="__('Password')" type="password" />
+
+                        <div class="flex justify-end space-x-2 rtl:space-x-reverse">
+                            <x-fwb.button color="light" @click="showDeleteModal = false">{{ __('Cancel') }}</x-fwb.button>
+
+                            <x-fwb.button color="red" type="submit" data-test="confirm-delete-user-button">
+                                {{ __('Delete account') }}
+                            </x-fwb.button>
+                        </div>
+                    </form>
+                </div>
             </div>
-
-            <flux:input wire:model="password" :label="__('Password')" type="password" />
-
-            <div class="flex justify-end space-x-2 rtl:space-x-reverse">
-                <flux:modal.close>
-                    <flux:button variant="filled">{{ __('Cancel') }}</flux:button>
-                </flux:modal.close>
-
-                <flux:button variant="danger" type="submit" data-test="confirm-delete-user-button">
-                    {{ __('Delete account') }}
-                </flux:button>
-            </div>
-        </form>
-    </flux:modal>
+        </div>
+    </div>
 </section>

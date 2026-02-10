@@ -12,9 +12,9 @@
     ],
     "sail": false,
     "skills": [
-        "fluxui-development",
         "livewire-development",
         "pest-testing",
+        "tailwindcss-development",
         "developing-with-fortify"
     ]
 }

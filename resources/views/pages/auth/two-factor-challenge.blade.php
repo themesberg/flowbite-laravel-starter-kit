@@ -13,12 +13,10 @@
                     this.code = '';
                     this.recovery_code = '';
 
-                    $dispatch('clear-2fa-auth-code');
-
                     $nextTick(() => {
                         this.showRecoveryInput
                             ? this.$refs.recovery_code?.focus()
-                            : $dispatch('focus-2fa-auth-code');
+                            : this.$refs.code?.focus();
                     });
                 },
             }"
@@ -42,51 +40,52 @@
 
                 <div class="space-y-5 text-center">
                     <div x-show="!showRecoveryInput">
-                        <div class="flex items-center justify-center my-5">
-                            <flux:otp
-                                x-model="code"
-                                length="6"
+                        <div class="my-5">
+                            <x-fwb.input
+                                type="text"
                                 name="code"
-                                label="OTP Code"
-                                label:sr-only
-                                class="mx-auto"
-                             />
+                                x-model="code"
+                                x-ref="code"
+                                maxlength="6"
+                                placeholder="000000"
+                                class="text-center text-lg tracking-widest"
+                                :label="__('Authentication Code')"
+                                autofocus
+                            />
+                            @error('code')
+                                <p class="mt-2 text-sm text-red-600 dark:text-red-500">{{ $message }}</p>
+                            @enderror
                         </div>
                     </div>
 
                     <div x-show="showRecoveryInput">
                         <div class="my-5">
-                            <flux:input
+                            <x-fwb.input
                                 type="text"
                                 name="recovery_code"
                                 x-ref="recovery_code"
                                 x-bind:required="showRecoveryInput"
                                 autocomplete="one-time-code"
                                 x-model="recovery_code"
+                                :label="__('Recovery Code')"
                             />
                         </div>
 
                         @error('recovery_code')
-                            <flux:text color="red">
-                                {{ $message }}
-                            </flux:text>
+                            <p class="text-sm text-red-600 dark:text-red-500">{{ $message }}</p>
                         @enderror
                     </div>
 
-                    <flux:button
-                        variant="primary"
-                        type="submit"
-                        class="w-full"
-                    >
+                    <x-fwb.button type="submit" class="w-full">
                         {{ __('Continue') }}
-                    </flux:button>
+                    </x-fwb.button>
                 </div>
 
                 <div class="mt-5 space-x-0.5 text-sm leading-5 text-center">
-                    <span class="opacity-50">{{ __('or you can') }}</span>
-                    <div class="inline font-medium underline cursor-pointer opacity-80">
-                        <span x-show="!showRecoveryInput" @click="toggleInput()">{{ __('login using a recovery code') }}</span>
-                        <span x-show="showRecoveryInput" @click="toggleInput()">{{ __('login using an authentication code') }}</span>
+                    <span class="text-gray-500 dark:text-gray-400">{{ __('or you can') }}</span>
+                    <div class="inline font-medium cursor-pointer">
+                        <span x-show="!showRecoveryInput" @click="toggleInput()" class="text-blue-600 hover:underline dark:text-blue-500">{{ __('login using a recovery code') }}</span>
+                        <span x-show="showRecoveryInput" @click="toggleInput()" class="text-blue-600 hover:underline dark:text-blue-500">{{ __('login using an authentication code') }}</span>
                     </div>
                 </div>
             </form>

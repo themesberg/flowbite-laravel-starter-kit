@@ -1,3 +1,3 @@
-<x-layouts::auth.simple :title="$title ?? null">
+<x-fwb.layouts.auth :title="$title ?? null">
     {{ $slot }}
-</x-layouts::auth.simple>
+</x-fwb.layouts.auth>

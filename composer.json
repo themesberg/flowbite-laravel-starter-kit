@@ -13,9 +13,15 @@
         "laravel/fortify": "^1.30",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
-        "livewire/flux": "^2.9.0",
-        "livewire/livewire": "^4.0"
+        "livewire/livewire": "^4.0",
+        "themesberg/flowbite-blade": "@dev"
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../flowbite-blade"
+        }
+    ],
     "require-dev": {
         "fakerphp/faker": "^1.23",
         "laravel/boost": "^2.1",

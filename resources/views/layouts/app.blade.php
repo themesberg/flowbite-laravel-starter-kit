@@ -1,5 +1,3 @@
-<x-layouts::app.sidebar :title="$title ?? null">
-    <flux:main>
-        {{ $slot }}
-    </flux:main>
-</x-layouts::app.sidebar>
+<x-fwb.layouts.admin :title="$title ?? null">
+    {{ $slot }}
+</x-fwb.layouts.admin>
