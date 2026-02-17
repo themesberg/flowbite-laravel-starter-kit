@@ -24,6 +24,9 @@
                     <a href="#features" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Features</a>
                 </li>
                 <li>
+                    <a href="#pricing" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Pricing</a>
+                </li>
+                <li>
                     <a href="#cta" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">About</a>
                 </li>
             </ul>
@@ -138,6 +141,13 @@
             <dd class="font-light text-gray-500 dark:text-gray-400">Dark mode support</dd>
         </div>
     </x-fwb.blocks.marketing.social-proof>
+
+    {{-- Pricing --}}
+    <x-fwb.blocks.marketing.pricing
+        id="pricing"
+        title="Simple, transparent pricing"
+        description="Choose the perfect plan for your team. All plans include access to our full component library and priority support."
+    />
 
     {{-- CTA --}}
     <x-fwb.blocks.marketing.cta
