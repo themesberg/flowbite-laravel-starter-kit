@@ -243,7 +243,7 @@ new class extends Component {
             <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
                 {{-- Close button --}}
                 <button type="button" class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" @click="$wire.closeModal()">
-                    <svg class="w-3 h-3" fill="none" viewBox="0 0 14 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/></svg>
+                    <x-fwb-o-close class="w-3 h-3" />
                     <span class="sr-only">{{ __('Close') }}</span>
                 </button>
 
@@ -368,8 +368,8 @@ new class extends Component {
                                             @click="copy()"
                                             class="px-3 transition-colors border-l cursor-pointer border-gray-200 dark:border-gray-600 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
                                         >
-                                            <svg x-show="!copied" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
-                                            <svg x-show="copied" class="w-5 h-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                            <x-fwb-o-clipboard class="w-5 h-5" x-show="!copied" />
+                                            <x-fwb-o-check class="w-5 h-5 text-green-500" x-show="copied" />
                                         </button>
                                     @endempty
                                 </div>

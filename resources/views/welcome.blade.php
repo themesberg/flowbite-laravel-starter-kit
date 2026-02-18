@@ -67,9 +67,7 @@
         {{-- Authentication --}}
         <div>
             <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
-                <svg class="w-5 h-5 text-blue-600 lg:w-6 lg:h-6 dark:text-blue-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
-                </svg>
+                <x-fwb-s-user class="w-5 h-5 text-blue-600 lg:w-6 lg:h-6 dark:text-blue-300" />
             </div>
             <h3 class="mb-2 text-xl font-bold dark:text-white">Authentication</h3>
             <p class="text-gray-500 dark:text-gray-400">Complete auth scaffolding with login, register, password reset, email verification, and profile management — powered by Laravel Fortify.</p>
@@ -77,9 +75,7 @@
         {{-- Dark Mode --}}
         <div>
             <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
-                <svg class="w-5 h-5 text-blue-600 lg:w-6 lg:h-6 dark:text-blue-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-                </svg>
+                <x-fwb-s-moon class="w-5 h-5 text-blue-600 lg:w-6 lg:h-6 dark:text-blue-300" />
             </div>
             <h3 class="mb-2 text-xl font-bold dark:text-white">Dark Mode</h3>
             <p class="text-gray-500 dark:text-gray-400">Built-in dark mode support with localStorage persistence, system preference detection, and zero flash of unstyled content.</p>
@@ -87,9 +83,7 @@
         {{-- Blade Components --}}
         <div>
             <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
-                <svg class="w-5 h-5 text-blue-600 lg:w-6 lg:h-6 dark:text-blue-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
+                <x-fwb-s-chart-mixed class="w-5 h-5 text-blue-600 lg:w-6 lg:h-6 dark:text-blue-300" />
             </div>
             <h3 class="mb-2 text-xl font-bold dark:text-white">50+ Blade Components</h3>
             <p class="text-gray-500 dark:text-gray-400">Buttons, modals, dropdowns, tables, cards, and more — all as composable Blade components with Tailwind CSS styling.</p>
@@ -97,9 +91,7 @@
         {{-- Responsive --}}
         <div>
             <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
-                <svg class="w-5 h-5 text-blue-600 lg:w-6 lg:h-6 dark:text-blue-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clip-rule="evenodd"></path>
-                </svg>
+                <x-fwb-s-desktop-pc class="w-5 h-5 text-blue-600 lg:w-6 lg:h-6 dark:text-blue-300" />
             </div>
             <h3 class="mb-2 text-xl font-bold dark:text-white">Fully Responsive</h3>
             <p class="text-gray-500 dark:text-gray-400">Every component and layout is mobile-first and fully responsive, from the admin sidebar to the marketing landing pages.</p>
@@ -117,9 +109,7 @@
         {{-- Marketing Blocks --}}
         <div>
             <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
-                <svg class="w-5 h-5 text-blue-600 lg:w-6 lg:h-6 dark:text-blue-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path>
-                </svg>
+                <x-fwb-s-layers class="w-5 h-5 text-blue-600 lg:w-6 lg:h-6 dark:text-blue-300" />
             </div>
             <h3 class="mb-2 text-xl font-bold dark:text-white">Marketing Blocks</h3>
             <p class="text-gray-500 dark:text-gray-400">Pre-designed marketing sections — hero, features, pricing, CTA, testimonials, and more — ready to drop into any page.</p>
