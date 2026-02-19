@@ -67,7 +67,7 @@
         {{-- Authentication --}}
         <div>
             <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
-                <x-fwb-s-user class="w-5 h-5 text-blue-600 lg:w-6 lg:h-6 dark:text-blue-300" />
+                <x-fwb-s-user-circle class="w-5 h-5 text-blue-600 lg:w-6 lg:h-6 dark:text-blue-300" />
             </div>
             <h3 class="mb-2 text-xl font-bold dark:text-white">Authentication</h3>
             <p class="text-gray-500 dark:text-gray-400">Complete auth scaffolding with login, register, password reset, email verification, and profile management — powered by Laravel Fortify.</p>
