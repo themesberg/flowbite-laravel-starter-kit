@@ -1,8 +1,10 @@
 @import 'tailwindcss';
 @import 'flowbite/src/themes/default';
+@plugin 'flowbite/plugin';
 
 @source '../views';
 @source '../../vendor/themesberg/flowbite-blade/resources/views/**/*.blade.php';
+@source '../../vendor/themesberg/flowbite-blade/src/**/*.php';
 @source '../../node_modules/flowbite/**/*.js';
 
 @custom-variant dark (&:where(.dark, .dark *));
