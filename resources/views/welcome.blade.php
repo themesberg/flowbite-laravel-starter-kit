@@ -137,7 +137,52 @@
         id="pricing"
         title="Simple, transparent pricing"
         description="Choose the perfect plan for your team. All plans include access to our full component library and priority support."
-    />
+    >
+        <x-fwb.pricing-card
+            title="Starter"
+            description="Best option for personal use & for your next project."
+            price="29"
+            period="/month"
+            button-text="Get started"
+            button-href="#"
+        >
+            <x-fwb.pricing-card.feature>Individual configuration</x-fwb.pricing-card.feature>
+            <x-fwb.pricing-card.feature>No setup, or hidden fees</x-fwb.pricing-card.feature>
+            <x-fwb.pricing-card.feature>Team size: <span class="font-semibold">1 developer</span></x-fwb.pricing-card.feature>
+            <x-fwb.pricing-card.feature>Premium support: <span class="font-semibold">6 months</span></x-fwb.pricing-card.feature>
+            <x-fwb.pricing-card.feature>Free updates: <span class="font-semibold">6 months</span></x-fwb.pricing-card.feature>
+        </x-fwb.pricing-card>
+
+        <x-fwb.pricing-card
+            title="Company"
+            description="Relevant for multiple users, extended & premium support."
+            price="99"
+            period="/month"
+            button-text="Get started"
+            button-href="#"
+        >
+            <x-fwb.pricing-card.feature>Individual configuration</x-fwb.pricing-card.feature>
+            <x-fwb.pricing-card.feature>No setup, or hidden fees</x-fwb.pricing-card.feature>
+            <x-fwb.pricing-card.feature>Team size: <span class="font-semibold">10 developers</span></x-fwb.pricing-card.feature>
+            <x-fwb.pricing-card.feature>Premium support: <span class="font-semibold">24 months</span></x-fwb.pricing-card.feature>
+            <x-fwb.pricing-card.feature>Free updates: <span class="font-semibold">24 months</span></x-fwb.pricing-card.feature>
+        </x-fwb.pricing-card>
+
+        <x-fwb.pricing-card
+            title="Enterprise"
+            description="Best for large scale uses and extended redistribution rights."
+            price="499"
+            period="/month"
+            button-text="Get started"
+            button-href="#"
+        >
+            <x-fwb.pricing-card.feature>Individual configuration</x-fwb.pricing-card.feature>
+            <x-fwb.pricing-card.feature>No setup, or hidden fees</x-fwb.pricing-card.feature>
+            <x-fwb.pricing-card.feature>Team size: <span class="font-semibold">100+ developers</span></x-fwb.pricing-card.feature>
+            <x-fwb.pricing-card.feature>Premium support: <span class="font-semibold">36 months</span></x-fwb.pricing-card.feature>
+            <x-fwb.pricing-card.feature>Free updates: <span class="font-semibold">36 months</span></x-fwb.pricing-card.feature>
+        </x-fwb.pricing-card>
+    </x-fwb.blocks.marketing.pricing>
 
     {{-- CTA --}}
     <x-fwb.blocks.marketing.cta
