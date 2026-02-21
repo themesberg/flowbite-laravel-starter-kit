@@ -64,56 +64,12 @@
         title="Everything you need to build modern apps"
         description="Pre-built components and blocks designed for Laravel applications, with dark mode, responsive layouts, and full Livewire support."
     >
-        {{-- Authentication --}}
-        <div>
-            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
-                <x-fwb-s-user-circle class="w-5 h-5 text-blue-600 lg:w-6 lg:h-6 dark:text-blue-300" />
-            </div>
-            <h3 class="mb-2 text-xl font-bold dark:text-white">Authentication</h3>
-            <p class="text-gray-500 dark:text-gray-400">Complete auth scaffolding with login, register, password reset, email verification, and profile management — powered by Laravel Fortify.</p>
-        </div>
-        {{-- Dark Mode --}}
-        <div>
-            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
-                <x-fwb-s-moon class="w-5 h-5 text-blue-600 lg:w-6 lg:h-6 dark:text-blue-300" />
-            </div>
-            <h3 class="mb-2 text-xl font-bold dark:text-white">Dark Mode</h3>
-            <p class="text-gray-500 dark:text-gray-400">Built-in dark mode support with localStorage persistence, system preference detection, and zero flash of unstyled content.</p>
-        </div>
-        {{-- Blade Components --}}
-        <div>
-            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
-                <x-fwb-s-chart-mixed class="w-5 h-5 text-blue-600 lg:w-6 lg:h-6 dark:text-blue-300" />
-            </div>
-            <h3 class="mb-2 text-xl font-bold dark:text-white">50+ Blade Components</h3>
-            <p class="text-gray-500 dark:text-gray-400">Buttons, modals, dropdowns, tables, cards, and more — all as composable Blade components with Tailwind CSS styling.</p>
-        </div>
-        {{-- Responsive --}}
-        <div>
-            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
-                <x-fwb-s-desktop-pc class="w-5 h-5 text-blue-600 lg:w-6 lg:h-6 dark:text-blue-300" />
-            </div>
-            <h3 class="mb-2 text-xl font-bold dark:text-white">Fully Responsive</h3>
-            <p class="text-gray-500 dark:text-gray-400">Every component and layout is mobile-first and fully responsive, from the admin sidebar to the marketing landing pages.</p>
-        </div>
-        {{-- Livewire --}}
-        <div>
-            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
-                <svg class="w-5 h-5 text-blue-600 lg:w-6 lg:h-6 dark:text-blue-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
-                </svg>
-            </div>
-            <h3 class="mb-2 text-xl font-bold dark:text-white">Livewire Powered</h3>
-            <p class="text-gray-500 dark:text-gray-400">Reactive, real-time interfaces built with Livewire and Alpine.js — no custom JavaScript required for dynamic functionality.</p>
-        </div>
-        {{-- Marketing Blocks --}}
-        <div>
-            <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
-                <x-fwb-s-layers class="w-5 h-5 text-blue-600 lg:w-6 lg:h-6 dark:text-blue-300" />
-            </div>
-            <h3 class="mb-2 text-xl font-bold dark:text-white">Marketing Blocks</h3>
-            <p class="text-gray-500 dark:text-gray-400">Pre-designed marketing sections — hero, features, pricing, CTA, testimonials, and more — ready to drop into any page.</p>
-        </div>
+        <x-fwb.blocks.marketing.feature.item fwb-icon="s-user-circle" title="Authentication" description="Complete auth scaffolding with login, register, password reset, email verification, and profile management — powered by Laravel Fortify." />
+        <x-fwb.blocks.marketing.feature.item fwb-icon="s-moon" title="Dark Mode" description="Built-in dark mode support with localStorage persistence, system preference detection, and zero flash of unstyled content." />
+        <x-fwb.blocks.marketing.feature.item fwb-icon="s-chart-mixed" title="50+ Blade Components" description="Buttons, modals, dropdowns, tables, cards, and more — all as composable Blade components with Tailwind CSS styling." />
+        <x-fwb.blocks.marketing.feature.item fwb-icon="s-desktop-pc" title="Fully Responsive" description="Every component and layout is mobile-first and fully responsive, from the admin sidebar to the marketing landing pages." />
+        <x-fwb.blocks.marketing.feature.item fwb-icon="s-rocket" title="Livewire Powered" description="Reactive, real-time interfaces built with Livewire and Alpine.js — no custom JavaScript required for dynamic functionality." />
+        <x-fwb.blocks.marketing.feature.item fwb-icon="s-layers" title="Marketing Blocks" description="Pre-designed marketing sections — hero, features, pricing, CTA, testimonials, and more — ready to drop into any page." />
     </x-fwb.blocks.marketing.feature>
 
     {{-- Social Proof --}}
