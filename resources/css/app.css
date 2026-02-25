@@ -3,8 +3,8 @@
 @plugin 'flowbite/plugin';
 
 @source '../views';
-@source '../../vendor/themesberg/flowbite-blade/resources/views/**/*.blade.php';
-@source '../../vendor/themesberg/flowbite-blade/src/**/*.php';
+@source '../../vendor/themesberg/flowbite-laravel-components/resources/views/**/*.blade.php';
+@source '../../vendor/themesberg/flowbite-laravel-components/src/**/*.php';
 @source '../../node_modules/flowbite/**/*.js';
 
 @custom-variant dark (&:where(.dark, .dark *));
